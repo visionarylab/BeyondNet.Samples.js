@@ -5,14 +5,14 @@ class Scoreboard {
   join(name) {
     this.board.push({
       name,
-      points: 0
+      points: 0,
     });
   }
   leave(name) {
-    this.board = this.board.filter(player => player.name !== name);
+    this.board = this.board.filter((player) => player.name !== name);
   }
   update(name, points) {
-    const player = this.board.findIndex(player => player.name === name);
+    const player = this.board.findIndex((player) => player.name === name);
     if (player > -1) {
       this.board[player].points += points;
     }
