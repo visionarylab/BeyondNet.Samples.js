@@ -1,4 +1,5 @@
-const { greetings } = require('./core');
+import { greetings } from './core';
+
 const { curryGreetings } = require('./currying/basic');
 const { partialMorningGreetings } = require('./partial/basic');
 const { ramdaGreettings } = require('./ramda/basic');
@@ -25,6 +26,14 @@ console.log(morningGreeting);
 
 console.log('4. Ramda');
 
-const greet = friends.map(ramdaGreettings('Good Morning'));
+const ramdaGreetSimpleFunction = ramdaGreettings('Good Night', 'Aitana');
 
-console.log(greet);
+const ramdaGreetCurry = friends.map(ramdaGreettings('Good Morning'));
+
+const ramdaGreetAfternoonPartial = ramdaGreettings('Good Afternoon');
+
+const ramdaGreetAfternoon = ramdaGreetAfternoonPartial('Beto');
+
+console.log(ramdaGreetSimpleFunction);
+console.log(ramdaGreetCurry);
+console.log(ramdaGreetAfternoon);
