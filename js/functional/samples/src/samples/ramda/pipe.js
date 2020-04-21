@@ -35,3 +35,36 @@ export const printStringPipeAsync = async () => {
 
   console.log(result);
 };
+
+async function AsyncFunction1() {
+  return new Promise((resolve, reject) => {
+    setTimeout(function () {
+      resolve("This is a test for pipe.withAll ");
+    }, 250);
+  });
+}
+async function AsyncFunction2() {
+  return new Promise((resolve, reject) => {
+    setTimeout(function () {
+      resolve("It works only for async functions? ");
+    }, 250);
+  });
+}
+
+async function AsyncFunction3() {
+  return new Promise((resolve, reject) => {
+    setTimeout(function () {
+      resolve("What do you thing ");
+    }, 250);
+  });
+}
+
+export const printPipeWithAsynFunctions = () => {
+  const result = R.pipeWith(R.andThen, [
+    AsyncFunction1,
+    AsyncFunction2,
+    AsyncFunction3,
+  ])("");
+
+  console.log(result);
+};

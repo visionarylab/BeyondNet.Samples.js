@@ -5,4 +5,8 @@ export {
 
 export { getPath } from "./path";
 
-export { printStringPipe, printStringPipeAsync } from "./pipe";
+export {
+  printStringPipe,
+  printStringPipeAsync,
+  printPipeWithAsynFunctions,
+} from "./pipe";

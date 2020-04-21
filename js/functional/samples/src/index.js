@@ -7,6 +7,7 @@ import {
   getPath,
   printStringPipe,
   printStringPipeAsync,
+  printPipeWithAsynFunctions,
 } from "./samples/ramda";
 
 // const name = "Alberto Arroyo Raygada";
@@ -49,6 +50,8 @@ import {
 
 // getPath(["errors", 1, "data", 1], response);
 
-printStringPipe();
+// printStringPipe();
 
-printStringPipeAsync();
+// printStringPipeAsync();
+
+printPipeWithAsynFunctions();
