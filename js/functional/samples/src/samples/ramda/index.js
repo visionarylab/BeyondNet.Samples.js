@@ -4,3 +4,5 @@ export {
 } from "./componse";
 
 export { getPath } from "./path";
+
+export { printStringPipe, printStringPipeAsync } from "./pipe";

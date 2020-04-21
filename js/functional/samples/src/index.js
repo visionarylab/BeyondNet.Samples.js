@@ -5,44 +5,50 @@ import {
   getComposeSentenceCount,
   getComposeDigitsInSentence,
   getPath,
+  printStringPipe,
+  printStringPipeAsync,
 } from "./samples/ramda";
 
-const name = "Alberto Arroyo Raygada";
+// const name = "Alberto Arroyo Raygada";
 
-const friends = ["Beto", "Ronald", "Luiggi", "JC"];
+// const friends = ["Beto", "Ronald", "Luiggi", "JC"];
 
-const sentence =
-  "PechaKucha is a presentation style in which 20 slides are shown for 20 seconds each (6 minutes and 40 seconds in total).";
+// const sentence =
+//   "PechaKucha is a presentation style in which 20 slides are shown for 20 seconds each (6 minutes and 40 seconds in total).";
 
-getGreetings(name);
+// getGreetings(name);
 
-getGreetingsCurry(friends);
+// getGreetingsCurry(friends);
 
-getGreetingsPartial(name);
+// getGreetingsPartial(name);
 
-getComposeSentenceCount(sentence);
+// getComposeSentenceCount(sentence);
 
-getComposeDigitsInSentence(sentence);
+// getComposeDigitsInSentence(sentence);
 
-const response = {
-  errors: [
-    {
-      code: 400,
-      description: "BadError",
-      data: [
-        { message: "The length to the object is not valid" },
-        { message: "The value can not be empty" },
-      ],
-    },
-    {
-      code: 500,
-      description: "Internal Server Error",
-      data: [
-        { message: "The server is time out" },
-        { message: "The server has problems" },
-      ],
-    },
-  ],
-};
+// const response = {
+//   errors: [
+//     {
+//       code: 400,
+//       description: "BadError",
+//       data: [
+//         { message: "The length to the object is not valid" },
+//         { message: "The value can not be empty" },
+//       ],
+//     },
+//     {
+//       code: 500,
+//       description: "Internal Server Error",
+//       data: [
+//         { message: "The server is time out" },
+//         { message: "The server has problems" },
+//       ],
+//     },
+//   ],
+// };
 
-getPath(["errors", 1, "data", 1], response);
+// getPath(["errors", 1, "data", 1], response);
+
+printStringPipe();
+
+printStringPipeAsync();
